@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "Art Exhibition",
+    "date": "2025-07-01",
+    "image_url": "Art Exhibition.jpeg"
+  },
+  {
+    "id": 2,
+    "title": "Modern Art Exhibition",
+    "date": "2025-07-02",
+    "image_url": "Modern Art Exhibition.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Contemporary Art Show",
+    "date": "2025-07-03",
+    "image_url": "Contemporary Art Show.jpeg"
+  },
+  {
+    "id": 4,
+    "title": "Abstract Art Gala",
+    "date": "2025-07-04",
+    "image_url": "Abstract Art Gala.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Swan Lake",
+    "date": "2025-07-05",
+    "image_url": "Swan Lake.jpeg"
+  },
+  {
+    "id": 6,
+    "title": "Jazz Night",
+    "date": "2025-07-12",
+    "image_url": "Jazz Night.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Food Festival",
+    "date": "2025-07-15",
+    "image_url": "Food Festival.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Tech Conference 2025",
+    "date": "2025-07-10",
+    "image_url": "Tech Conference 2025.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Outdoor Movie Night",
+    "date": "2025-07-18",
+    "image_url": "Outdoor Movie Night.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Photography Workshop",
+    "date": "2025-07-20",
+    "image_url": "Photography Workshop.jpeg"
+  },
+  {
+    "id": 11,
+    "title": "Yoga in the Park",
+    "date": "2025-07-21",
+    "image_url": "Yoga in the Park.webp"
+  },
+  {
+    "id": 12,
+    "title": "Historical Walking Tour",
+    "date": "2025-07-23",
+    "image_url": "Historical Walking Tour.jpg"
+  },
+  {
+    "id": 13,
+    "title": "Literature Meet-up",
+    "date": "2025-07-24",
+    "image_url": "Literature Meet-up.jpg"
+  },
+  {
+    "id": 14,
+    "title": "Stand‑Up Comedy Night",
+    "date": "2025-07-26",
+    "image_url": "Stand‑Up Comedy Night.jpg"
+  },
+  {
+    "id": 15,
+    "title": "Indie Music Festival",
+    "date": "2025-07-28",
+    "image_url": "Indie Music Festival.jpg"
+  }
+]
