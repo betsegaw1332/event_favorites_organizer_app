@@ -70,22 +70,20 @@ class EventCard extends StatelessWidget {
                   : IconButton(
                     icon: Icon(Icons.favorite_outline, color: Colors.black),
                     onPressed: () {
-                      if (favoriteFolderState.stateStatus ==
-                          AppStateStatus.successLoaded) {
-                        if (favoriteFolderState.favoriteFolders!.length > 1) {
-                          FolderSelectorBottomsheet.showBottomSheetDialog(
-                            context,
-                            eventData,
-                          );
-                        } else {
-                          context.read<EventsListBloc>().add(
-                            AddEventToFolderEvent(
-                              event: eventData,
-                              folderID:
-                                  favoriteFolderState.favoriteFolders!.first.id,
-                            ),
-                          );
-                        }
+                      if (favoriteFolderState.favoriteFolders != null &&
+                          favoriteFolderState.favoriteFolders!.length > 1) {
+                        FolderSelectorBottomsheet.showBottomSheetDialog(
+                          context,
+                          eventData,
+                        );
+                      } else {
+                        context.read<EventsListBloc>().add(
+                          AddEventToFolderEvent(
+                            event: eventData,
+                            folderID:
+                                favoriteFolderState.favoriteFolders!.first.id,
+                          ),
+                        );
                       }
                     },
                   ),

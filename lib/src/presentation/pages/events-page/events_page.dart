@@ -1,6 +1,7 @@
 import 'package:event_favorites_organizer/src/presentation/presentation.dart';
 import 'package:event_favorites_organizer/src/utils/utils.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 class EventsPage extends StatefulWidget {
@@ -47,6 +48,12 @@ class _EventsPageState extends State<EventsPage> {
           setState(() {
             _currentIndex = newIndex;
           });
+
+          if (_currentIndex == 1) {
+            context.read<FavoriteFolderBloc>().add(
+              GetAllFavoriteFoldersEvent(),
+            );
+          }
         },
         items: [
           BottomNavigationBarItem(

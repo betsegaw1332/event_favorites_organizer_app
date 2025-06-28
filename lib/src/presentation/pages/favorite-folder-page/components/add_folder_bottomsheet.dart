@@ -94,7 +94,9 @@ class _AddFolderBottomsheetState extends State<AddFolderBottomsheet> {
                           ? SizedBox(
                             height: 15.h,
                             width: 15.h,
-                            child: CircularProgressIndicator(),
+                            child: CircularProgressIndicator(
+                              color: Colors.white,
+                            ),
                           )
                           : Text('Add'),
 
@@ -114,8 +116,6 @@ class _AddFolderBottomsheetState extends State<AddFolderBottomsheet> {
                                   name: _controller.text,
                                 ),
                               );
-
-                              context.pop();
                             }
                           },
                 );

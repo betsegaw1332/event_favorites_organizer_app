@@ -50,8 +50,9 @@ class EventsListBloc extends Bloc<EventsListEvent, EventListState> {
     } catch (e) {
       emit(
         state.copyWith(
-          stateStatus: AppStateStatus.successLoaded,
+          stateStatus: AppStateStatus.error,
           error: LoadEventsFromJsonError(),
+
         ),
       );
     }

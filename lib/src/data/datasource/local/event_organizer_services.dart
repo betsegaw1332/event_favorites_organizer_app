@@ -9,7 +9,6 @@ class EventOrganizerServices {
 
   EventOrganizerServices() : _appDatabase = serviceLocator.get<AppDatabase>();
 
-
   Future<DataState<List<FolderModel>>> getFavoriteFolders() async {
     try {
       final temp =
@@ -92,7 +91,7 @@ class EventOrganizerServices {
 
   Future<bool> folderExists(String name) async {
     final query = _appDatabase.select(_appDatabase.folders)
-      ..where((tbl) => tbl.name.equals(name));
+      ..where((tbl) => tbl.name.lower().equals(name.toLowerCase()));
 
     return await query.getSingleOrNull() != null;
   }

@@ -46,6 +46,7 @@ class FavoriteFolderBloc
 
       if (response is DataSuccess) {
         final favoriteFolders = response.data;
+
         emit(
           state.copyWith(
             stateStatus: AppStateStatus.successLoaded,
@@ -100,7 +101,7 @@ class FavoriteFolderBloc
       } else {
         emit(
           state.copyWith(
-            errorMessage: "Failed To Fetch event items",
+            errorMessage: response.error.toString().replaceFirst('Exception: ', ''),
             error: FailedToLoadEventsInFolders(),
             stateStatus: AppStateStatus.error,
           ),
@@ -123,10 +124,12 @@ class FavoriteFolderBloc
   ) async {
     try {
       emit(
-        state.copyWith(
+       FavoriteFolderState(
           stateStatus: AppStateStatus.loadingButton,
           error: null,
           errorMessage: null,
+          favoriteFolders: state.favoriteFolders,
+          currentFolderEvents: state.currentFolderEvents
         ),
       );
 
@@ -143,7 +146,8 @@ class FavoriteFolderBloc
       } else {
         emit(
           state.copyWith(
-            errorMessage: "Failed To add folder ",
+            errorMessage:response.error.toString().replaceFirst('Exception: ', ''),
+             stateStatus:AppStateStatus.error,
             error: FailedToCreateNewFolder(),
           ),
         );
@@ -153,6 +157,7 @@ class FavoriteFolderBloc
         state.copyWith(
           errorMessage: e.toString(),
           error: FailedToCreateNewFolder(),
+           stateStatus:AppStateStatus.error,
         ),
       );
     }

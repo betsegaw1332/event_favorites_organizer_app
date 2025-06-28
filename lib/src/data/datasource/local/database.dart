@@ -58,6 +58,7 @@ class AppDatabase extends _$AppDatabase {
   }
 
   Future<void> initDefaultFolder() async {
+
     // Check if default folder already exists
     final defaultFolder = await (select(folders)
       ..where((tbl) => tbl.isDefault.equals(true)))
