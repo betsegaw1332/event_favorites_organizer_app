@@ -9,25 +9,6 @@ class EventOrganizerServices {
 
   EventOrganizerServices() : _appDatabase = serviceLocator.get<AppDatabase>();
 
-  // Future<DataState<EventItemModel>> createEvent({required EventItemModel request}) async {
-  //   try {
-  //     final response = await _appDatabase
-  //         .into(_appDatabase.eventItems)
-  //         .insert(
-  //           EventItemsCompanion.insert(
-  //             imageFile: Value(request.imageFile),
-  //             name: request.name,
-  //             date: request.date,
-  //             note: Value(request.note),
-  //             eventType: request.eventType,
-  //           ),
-  //         );
-
-  //     return DataSuccess(request.copyWith(id: response));
-  //   } on Exception catch (e) {
-  //     return DataFailed(e);
-  //   }
-  // }
 
   Future<DataState<List<FolderModel>>> getFavoriteFolders() async {
     try {
